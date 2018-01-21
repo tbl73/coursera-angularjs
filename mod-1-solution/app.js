@@ -25,10 +25,13 @@ function LunchCheckController($scope){
     //set message according to array length
     if (length == 0) {
       msg = "Please enter data first.";
+      $scope.msgColor = "red";
     } else if (length >= 1 && length <= 3) {
         msg = "Enjoy!";
+        $scope.msgColor = "green";
     } else {
         msg = "Too much!"
+        $scope.msgColor = "green";
     };
     return msg;
   };
