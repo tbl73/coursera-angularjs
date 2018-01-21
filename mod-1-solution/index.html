@@ -11,6 +11,7 @@
   </head>
   <body>
     <div ng-controller="LunchCheckController">
+      <!-- Note: empty items don't count toward the total -->
       <input type="text" ng-model="items" name="Check Your Lunch" placeholder="Make a comma separated list of your lunch dishes.">
       <button ng-click="checkLunch()">Check If Too Much</button>
       <div class="message">
