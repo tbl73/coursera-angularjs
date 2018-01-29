@@ -4,9 +4,9 @@
 angular.module('LunchCheckApp', [])
 .controller('LunchCheckController', LunchCheckController)
 
-LunchCheckController.$inject = ['$scope'];
+LunchCheckController.$inject = ['$scope', '$filter'];
 
-function LunchCheckController($scope){
+function LunchCheckController($scope, $filter){
   $scope.items = "";
   $scope.message = "";
 
@@ -21,6 +21,7 @@ function LunchCheckController($scope){
     var items = string.split(',').filter(function(x){
       return (x.trim() != "");
     });
+
     var length = items.length;
     //set message according to array length
     if (length == 0) {
